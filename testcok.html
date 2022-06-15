@@ -1,0 +1,1985 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Import Library &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Import Library
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/testcok.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftestcok.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/testcok.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Import Library
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-dataset">
+   Load Dataset
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-folding">
+   Case Folding
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenizing">
+   Tokenizing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghitung-frekuensi-distribusi-token">
+   Menghitung Frekuensi Distribusi Token
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-stopword-removal">
+   Filtering (Stopword Removal)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalization">
+   Normalization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stemming">
+   Stemming
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simpan-data-ke-csv">
+   Simpan Data ke CSV
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-data">
+   Prepare Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#term-frekuensi">
+   Term Frekuensi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tf-idf">
+   TF-IDF
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-file-to-csv">
+   Convert File to CSV
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Import Library</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Import Library
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-dataset">
+   Load Dataset
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-folding">
+   Case Folding
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tokenizing">
+   Tokenizing
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghitung-frekuensi-distribusi-token">
+   Menghitung Frekuensi Distribusi Token
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-stopword-removal">
+   Filtering (Stopword Removal)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalization">
+   Normalization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stemming">
+   Stemming
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simpan-data-ke-csv">
+   Simpan Data ke CSV
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-data">
+   Prepare Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#term-frekuensi">
+   Term Frekuensi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tf-idf">
+   TF-IDF
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-file-to-csv">
+   Convert File to CSV
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="import-library">
+<h1>Import Library<a class="headerlink" href="#import-library" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regrex libray</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">swifter</span>
+<span class="kn">import</span> <span class="nn">Sastrawi</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize.punkt</span> <span class="kn">import</span> <span class="n">PunktSentenceTokenizer</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regrex libray</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">nltk</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">swifter</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">Sastrawi</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;swifter&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="load-dataset">
+<h1>Load Dataset<a class="headerlink" href="#load-dataset" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;berita2.csv&#39;</span><span class="p">)</span>
+<span class="n">data_berita</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>judul</th>
+      <th>tanggal</th>
+      <th>kategori</th>
+      <th>deskripsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Begini Cara Menghemat Baterai iPhone</td>
+      <td>Jum'at, 22 April 2022 - 19:53 WIB</td>
+      <td>TELCO</td>
+      <td>Cara menghemat baterai iPhone rupanya bisa dil...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3 Cara Menghilangkan Virus di HP Android denga...</td>
+      <td>Jum'at, 22 April 2022 - 19:20 WIB</td>
+      <td>TELCO</td>
+      <td>Sebagian orang merasa bingung mencari cara men...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Cara Membuat PPT di HP dengan Microsoft</td>
+      <td>Jum'at, 22 April 2022 - 19:01 WIB</td>
+      <td>TELCO</td>
+      <td>Bagi anda yang sering melakukan presentasi, pe...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bug di Google Messages Bikin Baterai Boros dan...</td>
+      <td>Jum'at, 22 April 2022 - 17:50 WIB</td>
+      <td>TELCO</td>
+      <td>Bug pada aplikasi Google Messages berhasil dii...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sony Siap Tayangkan Iklan di Game PlayStation</td>
+      <td>Jum'at, 22 April 2022 - 17:40 WIB</td>
+      <td>GAMES</td>
+      <td>Sony dilaporkan berencana menyematkan iklan pa...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="case-folding">
+<h1>Case Folding<a class="headerlink" href="#case-folding" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ------ Case Folding --------</span>
+<span class="c1"># gunakan fungsi Series.str.lower() pada Pandas</span>
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Case Folding Result : </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Case Folding Result : 
+
+0     cara menghemat baterai iphone rupanya bisa dil...
+1     sebagian orang merasa bingung mencari cara men...
+2     bagi anda yang sering melakukan presentasi, pe...
+3     bug pada aplikasi google messages berhasil dii...
+4     sony dilaporkan berencana menyematkan iklan pa...
+5     lebaran sebentar lagi. seperti biasa, pada mom...
+6     banyak smartphone yang dibandrol dengan harga ...
+7     oppo a96 resmi melantai di indonesia, kamis (7...
+8     salah satu yang cocok jadi teman ngabuburit ad...
+9     pt. lg electronics indonesia (lg) resmi memasa...
+10    , google doodle secara jelas memperlihatkan ga...
+11    hai sobat gamer! bermain game sambil mengatur ...
+12    samsung galaxy a73 5g adalah varian tertinggi ...
+13    institusi pemerintah indonesia menjadi jawara ...
+14    elon musk makin getol ingin mengambil alih twi...
+15    kode redeem ff free fire jumat 22 april 2022, ...
+16    bocoran terkait iphone 16 sudah mulai beredar ...
+17    cara cek imei hp samsung ternyata tidak sulit ...
+18    realme memangkas sejumlah produk mereka selama...
+19    membayar zakat menjelang akhir ramadhan jelas ...
+Name: deskripsi, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tokenizing">
+<h1>Tokenizing<a class="headerlink" href="#tokenizing" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regex library</span>
+
+<span class="c1"># import word_tokenize &amp; FreqDist from NLTK</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span> 
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+
+<span class="c1"># ------ Tokenizing ---------</span>
+
+<span class="k">def</span> <span class="nf">remove_tweet_special</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># remove tab, new line, ans back slice</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+    <span class="c1"># remove mention, link, hashtag</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="c1"># remove incomplete URL</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+                
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_tweet_special</span><span class="p">)</span>
+
+<span class="c1">#remove number</span>
+<span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+
+<span class="c1">#remove punctuation</span>
+<span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">)</span>
+
+<span class="c1">#remove whitespace leading &amp; trailing</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_LT</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_LT</span><span class="p">)</span>
+
+<span class="c1">#remove multiple whitespace into single whitespace</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_multiple</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_multiple</span><span class="p">)</span>
+
+<span class="c1"># remove single char</span>
+<span class="k">def</span> <span class="nf">remove_singl_char</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_singl_char</span><span class="p">)</span>
+
+<span class="c1"># NLTK word rokenize </span>
+<span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize_wrapper</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tokenizing Result : </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tokenizing Result : 
+
+0     [cara, menghemat, baterai, iphone, rupanya, bi...
+1     [sebagian, orang, merasa, bingung, mencari, ca...
+2     [bagi, anda, yang, sering, melakukan, presenta...
+3     [bug, pada, aplikasi, google, messages, berhas...
+4     [sony, dilaporkan, berencana, menyematkan, ikl...
+5     [lebaran, sebentar, lagi, seperti, biasa, pada...
+6     [banyak, smartphone, yang, dibandrol, dengan, ...
+7     [oppo, resmi, melantai, di, indonesia, kamis, ...
+8     [salah, satu, yang, cocok, jadi, teman, ngabub...
+9     [pt, lg, electronics, indonesia, lg, resmi, me...
+10    [google, doodle, secara, jelas, memperlihatkan...
+11    [hai, sobat, gamer, bermain, game, sambil, men...
+12    [samsung, galaxy, adalah, varian, tertinggi, d...
+13    [institusi, pemerintah, indonesia, menjadi, ja...
+14    [elon, musk, makin, getol, ingin, mengambil, a...
+15    [kode, redeem, ff, free, fire, jumat, april, b...
+16    [bocoran, terkait, iphone, sudah, mulai, bered...
+17    [cara, cek, imei, hp, samsung, ternyata, tidak...
+18    [realme, memangkas, sejumlah, produk, mereka, ...
+19    [membayar, zakat, menjelang, akhir, ramadhan, ...
+Name: deskripsi_tokens, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="menghitung-frekuensi-distribusi-token">
+<h1>Menghitung Frekuensi Distribusi Token<a class="headerlink" href="#menghitung-frekuensi-distribusi-token" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NLTK calc frequency distribution</span>
+<span class="k">def</span> <span class="nf">freqDist_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">FreqDist</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_fdist&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">freqDist_wrapper</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Frequency Tokens : </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_fdist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">most_common</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Frequency Tokens : 
+
+0     [(cara, 2), (dengan, 2), (yang, 2), (menghemat...
+1     [(sebagian, 1), (orang, 1), (merasa, 1), (bing...
+2     [(anda, 2), (membuat, 2), (ppt, 2), (bagi, 1),...
+3     [(bug, 2), (aplikasi, 2), (pada, 1), (google, ...
+4     [(game, 3), (iklan, 2), (pada, 2), (sony, 1), ...
+5     [(yang, 4), (lebaran, 1), (sebentar, 1), (lagi...
+6     [(yang, 3), (dengan, 3), (harga, 2), (banyak, ...
+7     [(oppo, 3), (yang, 2), (resmi, 1), (melantai, ...
+8     [(satu, 2), (yang, 2), (salah, 1), (cocok, 1),...
+9     [(tv, 4), (lg, 2), (premium, 2), (led, 2), (pt...
+10    [(google, 1), (doodle, 1), (secara, 1), (jelas...
+11    [(game, 2), (hai, 1), (sobat, 1), (gamer, 1), ...
+12    [(samsung, 2), (di, 2), (galaxy, 1), (adalah, ...
+13    [(institusi, 1), (pemerintah, 1), (indonesia, ...
+14    [(elon, 1), (musk, 1), (makin, 1), (getol, 1),...
+15    [(free, 2), (fire, 2), (kode, 1), (redeem, 1),...
+16    [(bocoran, 2), (terkait, 1), (iphone, 1), (sud...
+17    [(cara, 1), (cek, 1), (imei, 1), (hp, 1), (sam...
+18    [(sejumlah, 2), (selama, 2), (realme, 1), (mem...
+19    [(zakat, 3), (membayar, 1), (menjelang, 1), (a...
+Name: deskripsi_tokens_fdist, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="filtering-stopword-removal">
+<h1>Filtering (Stopword Removal)<a class="headerlink" href="#filtering-stopword-removal" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+
+<span class="c1"># ----------------------- get stopword from NLTK stopword -------------------------------</span>
+<span class="c1"># get stopword indonesia</span>
+<span class="n">list_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># ---------------------------- manualy add stopword  ------------------------------------</span>
+<span class="c1"># append additional stopword</span>
+<span class="n">list_stopwords</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;yg&quot;</span><span class="p">,</span> <span class="s2">&quot;dg&quot;</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">,</span> <span class="s2">&quot;dgn&quot;</span><span class="p">,</span> <span class="s2">&quot;ny&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s1">&#39;klo&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;kalo&#39;</span><span class="p">,</span> <span class="s1">&#39;amp&#39;</span><span class="p">,</span> <span class="s1">&#39;biar&#39;</span><span class="p">,</span> <span class="s1">&#39;bikin&#39;</span><span class="p">,</span> <span class="s1">&#39;bilang&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;gak&#39;</span><span class="p">,</span> <span class="s1">&#39;ga&#39;</span><span class="p">,</span> <span class="s1">&#39;krn&#39;</span><span class="p">,</span> <span class="s1">&#39;nya&#39;</span><span class="p">,</span> <span class="s1">&#39;nih&#39;</span><span class="p">,</span> <span class="s1">&#39;sih&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;si&#39;</span><span class="p">,</span> <span class="s1">&#39;tau&#39;</span><span class="p">,</span> <span class="s1">&#39;tdk&#39;</span><span class="p">,</span> <span class="s1">&#39;tuh&#39;</span><span class="p">,</span> <span class="s1">&#39;utk&#39;</span><span class="p">,</span> <span class="s1">&#39;ya&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;jd&#39;</span><span class="p">,</span> <span class="s1">&#39;jgn&#39;</span><span class="p">,</span> <span class="s1">&#39;sdh&#39;</span><span class="p">,</span> <span class="s1">&#39;aja&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;nyg&#39;</span><span class="p">,</span> <span class="s1">&#39;hehe&#39;</span><span class="p">,</span> <span class="s1">&#39;pen&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="s1">&#39;nan&#39;</span><span class="p">,</span> <span class="s1">&#39;loh&#39;</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;&amp;amp&#39;</span><span class="p">,</span> <span class="s1">&#39;yah&#39;</span><span class="p">])</span>
+
+<span class="c1"># ----------------------- add stopword from txt file ------------------------------------</span>
+<span class="c1"># read txt stopword using pandas</span>
+<span class="n">txt_stopword</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;berita.csv&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;stopwords&quot;</span><span class="p">],</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># convert stopword string to list &amp; append additional stopword</span>
+<span class="n">list_stopwords</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">txt_stopword</span><span class="p">[</span><span class="s2">&quot;stopwords&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+
+<span class="c1"># ---------------------------------------------------------------------------------------</span>
+
+<span class="c1"># convert list to dictionary</span>
+<span class="n">list_stopwords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">list_stopwords</span><span class="p">)</span>
+
+
+<span class="c1">#remove stopword pada list token</span>
+<span class="k">def</span> <span class="nf">stopwords_removal</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_stopwords</span><span class="p">]</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_WSW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal</span><span class="p">)</span> 
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_WSW&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [menghemat, baterai, iphone, mudah, mode, daya...
+1     [orang, bingung, mencari, menghilangkan, virus...
+2                [presentasi, ppt, hp, ppt, smartphone]
+3     [bug, aplikasi, google, messages, berhasil, di...
+4     [sony, dilaporkan, berencana, menyematkan, ikl...
+5     [lebaran, sebentar, momen, spesial, cair, nama...
+6     [smartphone, dibandrol, harga, selangit, diban...
+7     [oppo, resmi, melantai, indonesia, kamis, smar...
+8     [salah, cocok, teman, ngabuburit, oppo, pasaln...
+9     [pt, lg, electronics, indonesia, lg, resmi, me...
+10    [google, doodle, gambar, berformat, gif, dampa...
+11    [hai, sobat, gamer, bermain, game, mengatur, l...
+12    [samsung, galaxy, varian, tertinggi, seri, sam...
+13    [institusi, pemerintah, indonesia, jawara, keb...
+14    [elon, musk, getol, mengambil, alih, twitter, ...
+15    [kode, redeem, ff, free, fire, jumat, april, m...
+16    [bocoran, terkait, iphone, beredar, intenet, b...
+17    [cek, imei, hp, samsung, sulit, pengguna, meng...
+18    [realme, memangkas, produk, ramadhan, khusunya...
+19    [membayar, zakat, menjelang, ramadhan, kewajib...
+Name: deskripsi_tokens_WSW, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="normalization">
+<h1>Normalization<a class="headerlink" href="#normalization" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normalizad_word</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;berita.csv&quot;</span><span class="p">)</span>
+
+<span class="n">normalizad_word_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">normalizad_word</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">normalizad_word_dict</span><span class="p">:</span>
+        <span class="n">normalizad_word_dict</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
+
+<span class="k">def</span> <span class="nf">normalized_term</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">normalizad_word_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">if</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">normalizad_word_dict</span> <span class="k">else</span> <span class="n">term</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">]</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_normalized&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_WSW&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalized_term</span><span class="p">)</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_normalized&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [menghemat, baterai, iphone, mudah, mode, daya...
+1     [orang, bingung, mencari, menghilangkan, virus...
+2                [presentasi, ppt, hp, ppt, smartphone]
+3     [bug, aplikasi, google, messages, berhasil, di...
+4     [sony, dilaporkan, berencana, menyematkan, ikl...
+5     [lebaran, sebentar, momen, spesial, cair, nama...
+6     [smartphone, dibandrol, harga, selangit, diban...
+7     [oppo, resmi, melantai, indonesia, kamis, smar...
+8     [salah, cocok, teman, ngabuburit, oppo, pasaln...
+9     [pt, lg, electronics, indonesia, lg, resmi, me...
+10    [google, doodle, gambar, berformat, gif, dampa...
+11    [hai, sobat, gamer, bermain, game, mengatur, l...
+12    [samsung, galaxy, varian, tertinggi, seri, sam...
+13    [institusi, pemerintah, indonesia, jawara, keb...
+14    [elon, musk, getol, mengambil, alih, twitter, ...
+15    [kode, redeem, ff, free, fire, jumat, april, m...
+16    [bocoran, terkait, iphone, beredar, intenet, b...
+17    [cek, imei, hp, samsung, sulit, pengguna, meng...
+18    [realme, memangkas, produk, ramadhan, khusunya...
+19    [membayar, zakat, menjelang, ramadhan, kewajib...
+Name: deskripsi_normalized, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="stemming">
+<h1>Stemming<a class="headerlink" href="#stemming" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import Sastrawi package</span>
+<span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">import</span> <span class="nn">swifter</span>
+
+
+<span class="c1"># create stemmer</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="c1"># stemmed</span>
+<span class="k">def</span> <span class="nf">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+
+<span class="n">term_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_normalized&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">term</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+            <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">term_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+    <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="n">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="s2">&quot;:&quot;</span> <span class="p">,</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">term_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># apply stemmed term to dataframe</span>
+<span class="k">def</span> <span class="nf">get_stemmed_term</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">]</span>
+
+<span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_stemmed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_normalized&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_stemmed_term</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi_tokens_stemmed&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>207
+------------------------
+menghemat : hemat
+baterai : baterai
+iphone : iphone
+mudah : mudah
+mode : mode
+daya : daya
+rendah : rendah
+didengar : dengar
+orang : orang
+bingung : bingung
+mencari : cari
+menghilangkan : hilang
+virus : virus
+hp : hp
+android : android
+mengikuti : ikut
+petunjuk : tunjuk
+sesuai : sesuai
+presentasi : presentasi
+ppt : ppt
+smartphone : smartphone
+bug : bug
+aplikasi : aplikasi
+google : google
+messages : messages
+berhasil : hasil
+diidentifikasi : identifikasi
+laporan : lapor
+togoogle : togoogle
+kamera : kamera
+berjalan : jalan
+sony : sony
+dilaporkan : lapor
+berencana : rencana
+menyematkan : semat
+iklan : iklan
+game : game
+playstation : playstation
+dimainkan : main
+gratis : gratis
+muncul : muncul
+keuntungan : untung
+pengembang : kembang
+lebaran : lebaran
+sebentar : sebentar
+momen : momen
+spesial : spesial
+cair : cair
+namanya : nama
+tunjangan : tunjang
+raya : raya
+thr : thr
+berniat : niat
+membeli : beli
+direkomendasikan : rekomendasi
+dibandrol : dibandrol
+harga : harga
+selangit : langit
+dibanderol : banderol
+murah : murah
+kisaran : kisar
+rp : rp
+jutaan : juta
+fitur : fitur
+memukau : pukau
+rekomendasinya : rekomendasi
+oppo : oppo
+resmi : resmi
+melantai : lantai
+indonesia : indonesia
+kamis : kamis
+hadir : hadir
+suksesor : suksesor
+membawa : bawa
+desain : desain
+glow : glow
+cantik : cantik
+memancarkan : pancar
+warna : warna
+berbeda : beda
+terkena : kena
+cahaya : cahaya
+salah : salah
+cocok : cocok
+teman : teman
+ngabuburit : ngabuburit
+pasalnya : pasal
+perangkat : perangkat
+sederet : deret
+lengkap : lengkap
+menemani : tani
+menunggu : tunggu
+buka : buka
+puasa : puasa
+pt : pt
+lg : lg
+electronics : electronics
+memasarkan : pasar
+koleksi : koleksi
+tv : tv
+premium : premium
+oled : oled
+kasta : kasta
+tertinggi : tinggi
+qned : qned
+mini : mini
+led : led
+kategori : kategori
+doodle : doodle
+gambar : gambar
+berformat : format
+gif : gif
+dampak : dampak
+mengerikan : keri
+perubahan : ubah
+iklim : iklim
+climate : climate
+change : change
+hai : hai
+sobat : sobat
+gamer : gamer
+bermain : main
+mengatur : atur
+lintas : lintas
+lakukan : laku
+traffic : traffic
+command : command
+samsung : samsung
+galaxy : galaxy
+varian : varian
+seri : seri
+merancangnya : rancang
+ponsel : ponsel
+terbaik : baik
+konten : konten
+juta : juta
+institusi : institusi
+pemerintah : perintah
+jawara : jawara
+kebocoran : bocor
+data : data
+versi : versi
+dark : dark
+tracer : tracer
+kuartal : kuartal
+elon : elon
+musk : musk
+getol : getol
+mengambil : ambil
+alih : alih
+twitter : twitter
+dana : dana
+segar : segar
+triliun : triliun
+upaya : upaya
+terwujud : wujud
+kode : kode
+redeem : redeem
+ff : ff
+free : free
+fire : fire
+jumat : jumat
+april : april
+manfaatkan : manfaat
+yuk : yuk
+cermati : cermat
+bocoran : bocor
+terkait : kait
+beredar : edar
+intenet : intenet
+kali : kali
+analis : analis
+gadget : gadget
+kenamaan : nama
+mingchi : mingchi
+kuo : kuo
+cek : cek
+imei : imei
+sulit : sulit
+pengguna : guna
+mengetahuinya : tahu
+realme : realme
+memangkas : mangkas
+produk : produk
+ramadhan : ramadhan
+khusunya : khusunya
+aiot : aiot
+sampaidengan : sampaidengan
+mei : mei
+toko : toko
+online : online
+membayar : bayar
+zakat : zakat
+menjelang : jelang
+kewajiban : wajib
+umat : umat
+muslim : muslim
+seiring : iring
+perkembangan : kembang
+zaman : zaman
+transaksi : transaksi
+keuangan : uang
+scan : scan
+qr : qr
+code : code
+fitrah : fitrah
+maal : maal
+{&#39;menghemat&#39;: &#39;hemat&#39;, &#39;baterai&#39;: &#39;baterai&#39;, &#39;iphone&#39;: &#39;iphone&#39;, &#39;mudah&#39;: &#39;mudah&#39;, &#39;mode&#39;: &#39;mode&#39;, &#39;daya&#39;: &#39;daya&#39;, &#39;rendah&#39;: &#39;rendah&#39;, &#39;didengar&#39;: &#39;dengar&#39;, &#39;orang&#39;: &#39;orang&#39;, &#39;bingung&#39;: &#39;bingung&#39;, &#39;mencari&#39;: &#39;cari&#39;, &#39;menghilangkan&#39;: &#39;hilang&#39;, &#39;virus&#39;: &#39;virus&#39;, &#39;hp&#39;: &#39;hp&#39;, &#39;android&#39;: &#39;android&#39;, &#39;mengikuti&#39;: &#39;ikut&#39;, &#39;petunjuk&#39;: &#39;tunjuk&#39;, &#39;sesuai&#39;: &#39;sesuai&#39;, &#39;presentasi&#39;: &#39;presentasi&#39;, &#39;ppt&#39;: &#39;ppt&#39;, &#39;smartphone&#39;: &#39;smartphone&#39;, &#39;bug&#39;: &#39;bug&#39;, &#39;aplikasi&#39;: &#39;aplikasi&#39;, &#39;google&#39;: &#39;google&#39;, &#39;messages&#39;: &#39;messages&#39;, &#39;berhasil&#39;: &#39;hasil&#39;, &#39;diidentifikasi&#39;: &#39;identifikasi&#39;, &#39;laporan&#39;: &#39;lapor&#39;, &#39;togoogle&#39;: &#39;togoogle&#39;, &#39;kamera&#39;: &#39;kamera&#39;, &#39;berjalan&#39;: &#39;jalan&#39;, &#39;sony&#39;: &#39;sony&#39;, &#39;dilaporkan&#39;: &#39;lapor&#39;, &#39;berencana&#39;: &#39;rencana&#39;, &#39;menyematkan&#39;: &#39;semat&#39;, &#39;iklan&#39;: &#39;iklan&#39;, &#39;game&#39;: &#39;game&#39;, &#39;playstation&#39;: &#39;playstation&#39;, &#39;dimainkan&#39;: &#39;main&#39;, &#39;gratis&#39;: &#39;gratis&#39;, &#39;muncul&#39;: &#39;muncul&#39;, &#39;keuntungan&#39;: &#39;untung&#39;, &#39;pengembang&#39;: &#39;kembang&#39;, &#39;lebaran&#39;: &#39;lebaran&#39;, &#39;sebentar&#39;: &#39;sebentar&#39;, &#39;momen&#39;: &#39;momen&#39;, &#39;spesial&#39;: &#39;spesial&#39;, &#39;cair&#39;: &#39;cair&#39;, &#39;namanya&#39;: &#39;nama&#39;, &#39;tunjangan&#39;: &#39;tunjang&#39;, &#39;raya&#39;: &#39;raya&#39;, &#39;thr&#39;: &#39;thr&#39;, &#39;berniat&#39;: &#39;niat&#39;, &#39;membeli&#39;: &#39;beli&#39;, &#39;direkomendasikan&#39;: &#39;rekomendasi&#39;, &#39;dibandrol&#39;: &#39;dibandrol&#39;, &#39;harga&#39;: &#39;harga&#39;, &#39;selangit&#39;: &#39;langit&#39;, &#39;dibanderol&#39;: &#39;banderol&#39;, &#39;murah&#39;: &#39;murah&#39;, &#39;kisaran&#39;: &#39;kisar&#39;, &#39;rp&#39;: &#39;rp&#39;, &#39;jutaan&#39;: &#39;juta&#39;, &#39;fitur&#39;: &#39;fitur&#39;, &#39;memukau&#39;: &#39;pukau&#39;, &#39;rekomendasinya&#39;: &#39;rekomendasi&#39;, &#39;oppo&#39;: &#39;oppo&#39;, &#39;resmi&#39;: &#39;resmi&#39;, &#39;melantai&#39;: &#39;lantai&#39;, &#39;indonesia&#39;: &#39;indonesia&#39;, &#39;kamis&#39;: &#39;kamis&#39;, &#39;hadir&#39;: &#39;hadir&#39;, &#39;suksesor&#39;: &#39;suksesor&#39;, &#39;membawa&#39;: &#39;bawa&#39;, &#39;desain&#39;: &#39;desain&#39;, &#39;glow&#39;: &#39;glow&#39;, &#39;cantik&#39;: &#39;cantik&#39;, &#39;memancarkan&#39;: &#39;pancar&#39;, &#39;warna&#39;: &#39;warna&#39;, &#39;berbeda&#39;: &#39;beda&#39;, &#39;terkena&#39;: &#39;kena&#39;, &#39;cahaya&#39;: &#39;cahaya&#39;, &#39;salah&#39;: &#39;salah&#39;, &#39;cocok&#39;: &#39;cocok&#39;, &#39;teman&#39;: &#39;teman&#39;, &#39;ngabuburit&#39;: &#39;ngabuburit&#39;, &#39;pasalnya&#39;: &#39;pasal&#39;, &#39;perangkat&#39;: &#39;perangkat&#39;, &#39;sederet&#39;: &#39;deret&#39;, &#39;lengkap&#39;: &#39;lengkap&#39;, &#39;menemani&#39;: &#39;tani&#39;, &#39;menunggu&#39;: &#39;tunggu&#39;, &#39;buka&#39;: &#39;buka&#39;, &#39;puasa&#39;: &#39;puasa&#39;, &#39;pt&#39;: &#39;pt&#39;, &#39;lg&#39;: &#39;lg&#39;, &#39;electronics&#39;: &#39;electronics&#39;, &#39;memasarkan&#39;: &#39;pasar&#39;, &#39;koleksi&#39;: &#39;koleksi&#39;, &#39;tv&#39;: &#39;tv&#39;, &#39;premium&#39;: &#39;premium&#39;, &#39;oled&#39;: &#39;oled&#39;, &#39;kasta&#39;: &#39;kasta&#39;, &#39;tertinggi&#39;: &#39;tinggi&#39;, &#39;qned&#39;: &#39;qned&#39;, &#39;mini&#39;: &#39;mini&#39;, &#39;led&#39;: &#39;led&#39;, &#39;kategori&#39;: &#39;kategori&#39;, &#39;doodle&#39;: &#39;doodle&#39;, &#39;gambar&#39;: &#39;gambar&#39;, &#39;berformat&#39;: &#39;format&#39;, &#39;gif&#39;: &#39;gif&#39;, &#39;dampak&#39;: &#39;dampak&#39;, &#39;mengerikan&#39;: &#39;keri&#39;, &#39;perubahan&#39;: &#39;ubah&#39;, &#39;iklim&#39;: &#39;iklim&#39;, &#39;climate&#39;: &#39;climate&#39;, &#39;change&#39;: &#39;change&#39;, &#39;hai&#39;: &#39;hai&#39;, &#39;sobat&#39;: &#39;sobat&#39;, &#39;gamer&#39;: &#39;gamer&#39;, &#39;bermain&#39;: &#39;main&#39;, &#39;mengatur&#39;: &#39;atur&#39;, &#39;lintas&#39;: &#39;lintas&#39;, &#39;lakukan&#39;: &#39;laku&#39;, &#39;traffic&#39;: &#39;traffic&#39;, &#39;command&#39;: &#39;command&#39;, &#39;samsung&#39;: &#39;samsung&#39;, &#39;galaxy&#39;: &#39;galaxy&#39;, &#39;varian&#39;: &#39;varian&#39;, &#39;seri&#39;: &#39;seri&#39;, &#39;merancangnya&#39;: &#39;rancang&#39;, &#39;ponsel&#39;: &#39;ponsel&#39;, &#39;terbaik&#39;: &#39;baik&#39;, &#39;konten&#39;: &#39;konten&#39;, &#39;juta&#39;: &#39;juta&#39;, &#39;institusi&#39;: &#39;institusi&#39;, &#39;pemerintah&#39;: &#39;perintah&#39;, &#39;jawara&#39;: &#39;jawara&#39;, &#39;kebocoran&#39;: &#39;bocor&#39;, &#39;data&#39;: &#39;data&#39;, &#39;versi&#39;: &#39;versi&#39;, &#39;dark&#39;: &#39;dark&#39;, &#39;tracer&#39;: &#39;tracer&#39;, &#39;kuartal&#39;: &#39;kuartal&#39;, &#39;elon&#39;: &#39;elon&#39;, &#39;musk&#39;: &#39;musk&#39;, &#39;getol&#39;: &#39;getol&#39;, &#39;mengambil&#39;: &#39;ambil&#39;, &#39;alih&#39;: &#39;alih&#39;, &#39;twitter&#39;: &#39;twitter&#39;, &#39;dana&#39;: &#39;dana&#39;, &#39;segar&#39;: &#39;segar&#39;, &#39;triliun&#39;: &#39;triliun&#39;, &#39;upaya&#39;: &#39;upaya&#39;, &#39;terwujud&#39;: &#39;wujud&#39;, &#39;kode&#39;: &#39;kode&#39;, &#39;redeem&#39;: &#39;redeem&#39;, &#39;ff&#39;: &#39;ff&#39;, &#39;free&#39;: &#39;free&#39;, &#39;fire&#39;: &#39;fire&#39;, &#39;jumat&#39;: &#39;jumat&#39;, &#39;april&#39;: &#39;april&#39;, &#39;manfaatkan&#39;: &#39;manfaat&#39;, &#39;yuk&#39;: &#39;yuk&#39;, &#39;cermati&#39;: &#39;cermat&#39;, &#39;bocoran&#39;: &#39;bocor&#39;, &#39;terkait&#39;: &#39;kait&#39;, &#39;beredar&#39;: &#39;edar&#39;, &#39;intenet&#39;: &#39;intenet&#39;, &#39;kali&#39;: &#39;kali&#39;, &#39;analis&#39;: &#39;analis&#39;, &#39;gadget&#39;: &#39;gadget&#39;, &#39;kenamaan&#39;: &#39;nama&#39;, &#39;mingchi&#39;: &#39;mingchi&#39;, &#39;kuo&#39;: &#39;kuo&#39;, &#39;cek&#39;: &#39;cek&#39;, &#39;imei&#39;: &#39;imei&#39;, &#39;sulit&#39;: &#39;sulit&#39;, &#39;pengguna&#39;: &#39;guna&#39;, &#39;mengetahuinya&#39;: &#39;tahu&#39;, &#39;realme&#39;: &#39;realme&#39;, &#39;memangkas&#39;: &#39;mangkas&#39;, &#39;produk&#39;: &#39;produk&#39;, &#39;ramadhan&#39;: &#39;ramadhan&#39;, &#39;khusunya&#39;: &#39;khusunya&#39;, &#39;aiot&#39;: &#39;aiot&#39;, &#39;sampaidengan&#39;: &#39;sampaidengan&#39;, &#39;mei&#39;: &#39;mei&#39;, &#39;toko&#39;: &#39;toko&#39;, &#39;online&#39;: &#39;online&#39;, &#39;membayar&#39;: &#39;bayar&#39;, &#39;zakat&#39;: &#39;zakat&#39;, &#39;menjelang&#39;: &#39;jelang&#39;, &#39;kewajiban&#39;: &#39;wajib&#39;, &#39;umat&#39;: &#39;umat&#39;, &#39;muslim&#39;: &#39;muslim&#39;, &#39;seiring&#39;: &#39;iring&#39;, &#39;perkembangan&#39;: &#39;kembang&#39;, &#39;zaman&#39;: &#39;zaman&#39;, &#39;transaksi&#39;: &#39;transaksi&#39;, &#39;keuangan&#39;: &#39;uang&#39;, &#39;scan&#39;: &#39;scan&#39;, &#39;qr&#39;: &#39;qr&#39;, &#39;code&#39;: &#39;code&#39;, &#39;fitrah&#39;: &#39;fitrah&#39;, &#39;maal&#39;: &#39;maal&#39;}
+------------------------
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "e601f9c68a80467996b3cf336d72c352", "version_major": 2, "version_minor": 0}
+</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [hemat, baterai, iphone, mudah, mode, daya, re...
+1     [orang, bingung, cari, hilang, virus, hp, andr...
+2                [presentasi, ppt, hp, ppt, smartphone]
+3     [bug, aplikasi, google, messages, hasil, ident...
+4     [sony, lapor, rencana, semat, iklan, game, pla...
+5     [lebaran, sebentar, momen, spesial, cair, nama...
+6     [smartphone, dibandrol, harga, langit, bandero...
+7     [oppo, resmi, lantai, indonesia, kamis, smartp...
+8     [salah, cocok, teman, ngabuburit, oppo, pasal,...
+9     [pt, lg, electronics, indonesia, lg, resmi, pa...
+10    [google, doodle, gambar, format, gif, dampak, ...
+11    [hai, sobat, gamer, main, game, atur, lintas, ...
+12    [samsung, galaxy, varian, tinggi, seri, samsun...
+13    [institusi, perintah, indonesia, jawara, bocor...
+14    [elon, musk, getol, ambil, alih, twitter, dana...
+15    [kode, redeem, ff, free, fire, jumat, april, m...
+16    [bocor, kait, iphone, edar, intenet, bocor, ka...
+17          [cek, imei, hp, samsung, sulit, guna, tahu]
+18    [realme, mangkas, produk, ramadhan, khusunya, ...
+19    [bayar, zakat, jelang, ramadhan, wajib, umat, ...
+Name: deskripsi_tokens_stemmed, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="simpan-data-ke-csv">
+<h1>Simpan Data ke CSV<a class="headerlink" href="#simpan-data-ke-csv" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_berita</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;Text_Preprocessing2.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prepare-data">
+<h1>Prepare Data<a class="headerlink" href="#prepare-data" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data_berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Text_Preprocessing2.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;deskripsi_tokens_stemmed&quot;</span><span class="p">])</span>
+<span class="n">data_berita</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;deskripsi&quot;</span><span class="p">]</span>
+
+<span class="n">data_berita</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>deskripsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>['hemat', 'baterai', 'iphone', 'mudah', 'mode'...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>['orang', 'bingung', 'cari', 'hilang', 'virus'...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>['presentasi', 'ppt', 'hp', 'ppt', 'smartphone']</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>['bug', 'aplikasi', 'google', 'messages', 'has...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>['sony', 'lapor', 'rencana', 'semat', 'iklan',...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>['lebaran', 'sebentar', 'momen', 'spesial', 'c...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>['smartphone', 'dibandrol', 'harga', 'langit',...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>['oppo', 'resmi', 'lantai', 'indonesia', 'kami...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>['salah', 'cocok', 'teman', 'ngabuburit', 'opp...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>['pt', 'lg', 'electronics', 'indonesia', 'lg',...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>['google', 'doodle', 'gambar', 'format', 'gif'...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>['hai', 'sobat', 'gamer', 'main', 'game', 'atu...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>['samsung', 'galaxy', 'varian', 'tinggi', 'ser...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>['institusi', 'perintah', 'indonesia', 'jawara...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>['elon', 'musk', 'getol', 'ambil', 'alih', 'tw...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>['kode', 'redeem', 'ff', 'free', 'fire', 'juma...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>['bocor', 'kait', 'iphone', 'edar', 'intenet',...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>['cek', 'imei', 'hp', 'samsung', 'sulit', 'gun...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>['realme', 'mangkas', 'produk', 'ramadhan', 'k...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>['bayar', 'zakat', 'jelang', 'ramadhan', 'waji...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="term-frekuensi">
+<h1>Term Frekuensi<a class="headerlink" href="#term-frekuensi" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="n">a</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+<span class="n">document</span> <span class="o">=</span> <span class="n">data_berita</span><span class="p">[</span><span class="s1">&#39;deskripsi&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a Vectorizer Object</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+
+<span class="n">vectorizer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+
+<span class="c1"># Printing the identified Unique words along with their indices</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vocabulary: &quot;</span><span class="p">,</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">)</span>
+
+<span class="c1"># Encode the Document</span>
+<span class="n">vector</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+
+<span class="c1"># Summarizing the Encoded Texts</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encoded Document is:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vector</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vocabulary:  {&#39;hemat&#39;: 64, &#39;baterai&#39;: 10, &#39;iphone&#39;: 75, &#39;mudah&#39;: 117, &#39;mode&#39;: 115, &#39;daya&#39;: 34, &#39;rendah&#39;: 152, &#39;dengar&#39;: 35, &#39;orang&#39;: 128, &#39;bingung&#39;: 15, &#39;cari&#39;: 22, &#39;hilang&#39;: 65, &#39;virus&#39;: 193, &#39;hp&#39;: 66, &#39;android&#39;: 4, &#39;ikut&#39;: 70, &#39;tunjuk&#39;: 183, &#39;sesuai&#39;: 163, &#39;presentasi&#39;: 138, &#39;ppt&#39;: 136, &#39;smartphone&#39;: 164, &#39;bug&#39;: 17, &#39;aplikasi&#39;: 5, &#39;google&#39;: 57, &#39;messages&#39;: 112, &#39;hasil&#39;: 63, &#39;identifikasi&#39;: 67, &#39;lapor&#39;: 101, &#39;togoogle&#39;: 175, &#39;kamera&#39;: 84, &#39;jalan&#39;: 77, &#39;sony&#39;: 166, &#39;rencana&#39;: 151, &#39;semat&#39;: 161, &#39;iklan&#39;: 68, &#39;game&#39;: 52, &#39;playstation&#39;: 134, &#39;main&#39;: 108, &#39;gratis&#39;: 58, &#39;muncul&#39;: 118, &#39;untung&#39;: 189, &#39;kembang&#39;: 88, &#39;lebaran&#39;: 102, &#39;sebentar&#39;: 159, &#39;momen&#39;: 116, &#39;spesial&#39;: 167, &#39;cair&#39;: 20, &#39;nama&#39;: 122, &#39;tunjang&#39;: 182, &#39;raya&#39;: 147, &#39;thr&#39;: 173, &#39;niat&#39;: 124, &#39;beli&#39;: 14, &#39;rekomendasi&#39;: 150, &#39;dibandrol&#39;: 38, &#39;harga&#39;: 62, &#39;langit&#39;: 99, &#39;banderol&#39;: 9, &#39;murah&#39;: 119, &#39;kisar&#39;: 92, &#39;rp&#39;: 154, &#39;juta&#39;: 81, &#39;fitur&#39;: 46, &#39;pukau&#39;: 142, &#39;oppo&#39;: 127, &#39;resmi&#39;: 153, &#39;lantai&#39;: 100, &#39;indonesia&#39;: 72, &#39;kamis&#39;: 85, &#39;hadir&#39;: 60, &#39;suksesor&#39;: 168, &#39;bawa&#39;: 11, &#39;desain&#39;: 37, &#39;glow&#39;: 56, &#39;cantik&#39;: 21, &#39;pancar&#39;: 129, &#39;warna&#39;: 195, &#39;beda&#39;: 13, &#39;kena&#39;: 89, &#39;cahaya&#39;: 19, &#39;salah&#39;: 155, &#39;cocok&#39;: 27, &#39;teman&#39;: 172, &#39;ngabuburit&#39;: 123, &#39;pasal&#39;: 130, &#39;perangkat&#39;: 132, &#39;deret&#39;: 36, &#39;lengkap&#39;: 104, &#39;tani&#39;: 171, &#39;tunggu&#39;: 181, &#39;buka&#39;: 18, &#39;puasa&#39;: 141, &#39;pt&#39;: 140, &#39;lg&#39;: 105, &#39;electronics&#39;: 41, &#39;pasar&#39;: 131, &#39;koleksi&#39;: 94, &#39;tv&#39;: 184, &#39;premium&#39;: 137, &#39;oled&#39;: 125, &#39;kasta&#39;: 86, &#39;tinggi&#39;: 174, &#39;qned&#39;: 143, &#39;mini&#39;: 114, &#39;led&#39;: 103, &#39;kategori&#39;: 87, &#39;doodle&#39;: 39, &#39;gambar&#39;: 51, &#39;format&#39;: 47, &#39;gif&#39;: 55, &#39;dampak&#39;: 30, &#39;keri&#39;: 90, &#39;ubah&#39;: 187, &#39;iklim&#39;: 69, &#39;climate&#39;: 26, &#39;change&#39;: 25, &#39;hai&#39;: 61, &#39;sobat&#39;: 165, &#39;gamer&#39;: 53, &#39;atur&#39;: 7, &#39;lintas&#39;: 106, &#39;laku&#39;: 98, &#39;traffic&#39;: 178, &#39;command&#39;: 29, &#39;samsung&#39;: 157, &#39;galaxy&#39;: 50, &#39;varian&#39;: 191, &#39;seri&#39;: 162, &#39;rancang&#39;: 146, &#39;ponsel&#39;: 135, &#39;baik&#39;: 8, &#39;konten&#39;: 95, &#39;institusi&#39;: 73, &#39;perintah&#39;: 133, &#39;jawara&#39;: 78, &#39;bocor&#39;: 16, &#39;data&#39;: 33, &#39;versi&#39;: 192, &#39;dark&#39;: 32, &#39;tracer&#39;: 177, &#39;kuartal&#39;: 96, &#39;elon&#39;: 42, &#39;musk&#39;: 120, &#39;getol&#39;: 54, &#39;ambil&#39;: 2, &#39;alih&#39;: 1, &#39;twitter&#39;: 185, &#39;dana&#39;: 31, &#39;segar&#39;: 160, &#39;triliun&#39;: 180, &#39;upaya&#39;: 190, &#39;wujud&#39;: 196, &#39;kode&#39;: 93, &#39;redeem&#39;: 149, &#39;ff&#39;: 43, &#39;free&#39;: 48, &#39;fire&#39;: 44, &#39;jumat&#39;: 80, &#39;april&#39;: 6, &#39;manfaat&#39;: 109, &#39;yuk&#39;: 197, &#39;cermat&#39;: 24, &#39;kait&#39;: 82, &#39;edar&#39;: 40, &#39;intenet&#39;: 74, &#39;kali&#39;: 83, &#39;analis&#39;: 3, &#39;gadget&#39;: 49, &#39;mingchi&#39;: 113, &#39;kuo&#39;: 97, &#39;cek&#39;: 23, &#39;imei&#39;: 71, &#39;sulit&#39;: 169, &#39;guna&#39;: 59, &#39;tahu&#39;: 170, &#39;realme&#39;: 148, &#39;mangkas&#39;: 110, &#39;produk&#39;: 139, &#39;ramadhan&#39;: 145, &#39;khusunya&#39;: 91, &#39;aiot&#39;: 0, &#39;sampaidengan&#39;: 156, &#39;mei&#39;: 111, &#39;toko&#39;: 176, &#39;online&#39;: 126, &#39;bayar&#39;: 12, &#39;zakat&#39;: 198, &#39;jelang&#39;: 79, &#39;wajib&#39;: 194, &#39;umat&#39;: 188, &#39;muslim&#39;: 121, &#39;iring&#39;: 76, &#39;zaman&#39;: 199, &#39;transaksi&#39;: 179, &#39;uang&#39;: 186, &#39;scan&#39;: 158, &#39;qr&#39;: 144, &#39;code&#39;: 28, &#39;fitrah&#39;: 45, &#39;maal&#39;: 107}
+Encoded Document is:
+[[0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ [0 0 0 ... 0 0 0]
+ ...
+ [0 0 0 ... 0 0 0]
+ [1 0 0 ... 0 0 0]
+ [0 0 0 ... 0 3 1]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tf-idf">
+<h1>TF-IDF<a class="headerlink" href="#tf-idf" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">(</span><span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">,</span> <span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">document</span><span class="p">))</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfb</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tf</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+<span class="n">dfb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>aiot</th>
+      <th>alih</th>
+      <th>ambil</th>
+      <th>analis</th>
+      <th>android</th>
+      <th>aplikasi</th>
+      <th>april</th>
+      <th>atur</th>
+      <th>baik</th>
+      <th>banderol</th>
+      <th>...</th>
+      <th>upaya</th>
+      <th>varian</th>
+      <th>versi</th>
+      <th>virus</th>
+      <th>wajib</th>
+      <th>warna</th>
+      <th>wujud</th>
+      <th>yuk</th>
+      <th>zakat</th>
+      <th>zaman</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.31006</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.31006</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.503252</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.273801</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.214433</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.292106</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.285538</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.285538</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.31574</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0.000000</td>
+      <td>0.293242</td>
+      <td>0.293242</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.293242</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.293242</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.217045</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.246919</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.281316</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0.300276</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.263947</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.19874</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.59622</td>
+      <td>0.19874</td>
+    </tr>
+  </tbody>
+</table>
+<p>20 rows × 200 columns</p>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="convert-file-to-csv">
+<h1>Convert File to CSV<a class="headerlink" href="#convert-file-to-csv" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfb</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;TF-IDF2.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
